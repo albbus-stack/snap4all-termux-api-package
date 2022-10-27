@@ -1,0 +1,21 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -e -u
+
+SCRIPTNAME=termux-bluetooth-connect
+show_usage () {
+    echo "Usage: termux-bluetooth-connect [device_uuid]"
+    echo "Connects to a given device and uuid"
+    exit 0
+}
+
+PARAMS=""
+
+shift $(($OPTIND-1))
+
+CMD="/data/data/com.termux/files/usr/libexec/termux-api BluetoothConnect $PARAMS"
+
+if [ $# = 0 ]; then
+    $CMD
+else
+    echo $@ | $CMD
+fi
