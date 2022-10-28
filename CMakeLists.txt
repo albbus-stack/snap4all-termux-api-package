@@ -68,6 +68,9 @@ set(script_files
   scripts/termux-wifi-connectioninfo
   scripts/termux-wifi-enable
   scripts/termux-wifi-scaninfo
+  scripts/termux-bluetooth-connect
+  scripts/termux-bluetooth-scaninfo
+  scripts/termux-enable-buttons
 )
 
 make_directory(scripts)
