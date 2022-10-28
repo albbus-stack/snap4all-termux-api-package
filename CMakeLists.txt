@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.0.0)
 project(termux-api)
 include(GNUInstallDirs)
 
+set(CMAKE_INSTALL_PREFIX /data/data/com.termux/files/usr)
+
 set(TERMUX_PREFIX ${CMAKE_INSTALL_PREFIX})
 
 add_library(termux-api SHARED termux-api.c)
